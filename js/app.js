@@ -1,7 +1,12 @@
 $(document).ready(function() {
-    $('.custom.example .ui.embed').embed({
-        source: 'youtube',
-        id: 'O6Xo21L0ybE',
-        placeholder: '/images/bear-waving.jpg'
+    $.ajax({
+        type: 'GET',
+        url: 'https://api.twitch.tv/kraken/channels/twitch',
+        headers: {
+            'Client-ID': 'axjhfp777tflhy0yjb5sftsil'
+        },
+        success: function(data) {
+            console.log(data);
+        }
     });
 }); //end doc.ready

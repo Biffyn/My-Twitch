@@ -13,7 +13,7 @@
 
 <body>
     <div class="main-wrapper">
-        <div id="header" class="ui menu violet inverted">
+        <div id="header" class="ui menu">
             <div class="ui container">
                 <a class="item">Browse</a>
                 <a class="item">Submit</a>
@@ -24,17 +24,55 @@
             </div>
         </div>
         <div id="feat-wrap">
-            <div id="featured" class="ui container">
-                <div id="video" class="ui embed"></div>
+            <div id="featured" class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8">
+                        <div id="profile-img">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="http://player.twitch.tv/?channel={riotgames}" allowfullscreen="true"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="profile-info" class="col-xs-12 col-md-4">
+                        <img id="channel-logo" class="pull-left" src="img/logo_biffyn.png" alt="Logo">
+                        <h4 id="channel-name">Channel Name</h4>
+                        <a id="game-type" href="">game type</a>
+                        <h3 id="stream-title">LOSUMG - Community Demolition and Re-Building Fun</h3>
+                        <p id="channel-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis facilis nemo neque quo aliquam omnis, perferendis saepe fugit maiores explicabo reprehenderit blanditiis ea incidunt enim laudantium, iste cupiditate quam debitis.</p>
+                        <a id="channel-link" href="https://www.twitch.tv/biffyn">https://www.twitch.tv/biffyn</a>
+                    </div>
+                </div>
             </div>
         </div>
+        <div id="online" class="container">
+            <h1 class="text-center dark">Online Channels</h1>
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <div class="ui centered card">
+                        <a class="image" href="#">
+                            <img src="img/logo_biffyn.png">
+                        </a>
+                        <div class="content">
+                            <a class="header" href="#">Channel name</a>
+                        </div>
+                        <div class="extra content">
+                            <span class="right floated">
+                                Online
+                            </span>
+                            <span>
+                            <i class="user icon"></i>
+                                75 Veiwers
+                          </span>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="container">
+            </div>
 
         </div>
     </div>
+    </div>
     <script src="js/lib/jquery-3.1.1.min.js" type="javascript"></script>
-    <script src="js/lib/semantic.min.js" type="javascript"></script>
     <script src="js/app.js" type="javascript"></script>
 </body>
 
