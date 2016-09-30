@@ -1,18 +1,24 @@
 body {
   background: #F5F5F5;
   font-size: 1em;
-  color: #F5F5F5;
+  color: #fff;
 }
 
 #header {
+  position: relative;
   border-radius: 0;
   margin-bottom: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
+#header a {
+  color: #9105FF;
+}
+
 #feat-wrap {
   margin: 0;
   background: #2a0845;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 #featured {
@@ -43,8 +49,12 @@ body {
   font-size: 1.1em;
 }
 
+#profile-info span {
+  margin-right: 0.3em;
+}
+
 #profile-info a {
-  color: #8E24AA;
+  color: #A3B200;
 }
 
 #profile-info p {
@@ -61,7 +71,7 @@ body {
 }
 
 #offline {
-  padding-top: 2em;
+  padding: 2em 0 2.5em 0;
 }
 
 #offline h1 {
@@ -71,4 +81,42 @@ body {
 
 .dark {
   color: #000000;
+}
+
+#card {
+  margin-bottom: 1.7em;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media screen and (min-width: 769px) {
+  #featured {
+    padding: 2em 1em;
+  }
+  #profile-info {
+    padding: 0em 1.8em 0em 0.2em;
+  }
+  #profile-info img {
+    margin-right: 1em;
+    height: 70px;
+    width: 70px;
+  }
+  #profile-info h4 {
+    font-size: 1.7em;
+  }
+  #profile-info h3 {
+    margin: 1.5em 0 1em 0;
+    font-size: 1.9em;
+  }
+  #profile-info span {
+    font-size: 1.2em;
+    margin-right: 0.3em;
+  }
+  #profile-info a {
+    font-size: 1.2em;
+    color: #A3B200;
+  }
+  #profile-info p {
+    font-size: 1.2em;
+    font-weight: 200;
+  }
 }

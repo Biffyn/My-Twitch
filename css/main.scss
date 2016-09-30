@@ -1,26 +1,30 @@
-$secondary: #6441A5;
+$primary: #2a0845;
+$secondary: #9105FF;
 $offWhite: #F5F5F5;
-$highlight: #8E24AA;
+$highlight: #A3B200;
 $darkPrimary: #000000;
 $darkSecondary: lighten($darkPrimary, 20%);
 
 body {
     background: $offWhite;
     font-size: 1em;
-    color: $offWhite;
+    color: #fff;
 }
 
 #header {
+    position:relative;
     border-radius: 0;
     margin-bottom: 0;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    a{
+        color: $secondary;
+    }
 }
 
 #feat-wrap {
     margin: 0;
-    background: #2a0845;
-    //background: -webkit-linear-gradient(to left, #6441A5 , #2a0845);
-    //background: linear-gradient(to left, #6441A5 , #2a0845);
+    background: $primary;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 #featured {
@@ -50,6 +54,10 @@ body {
         font-size: 1.1em;
     }
 
+    span {
+        margin-right: 0.3em;
+    }
+
     a {
         color: $highlight;
     }
@@ -66,14 +74,10 @@ body {
         font-size: 2.8em;
         margin-bottom: 0.8em;
     }
-    // img {
-    //     width: 290px;
-    //     height: 200px;
-    // }
 }
 
 #offline {
-    padding-top: 2em;
+    padding: 2em 0 2.5em 0;
 
     h1 {
         font-size: 2.7em;
@@ -84,4 +88,50 @@ body {
 .dark {
     color: $darkPrimary;
 }
-@media screen and (min-width:767px) {}
+
+#card{
+    margin-bottom: 1.7em;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+@media screen and (min-width:769px) {
+
+    #featured {
+        padding: 2em 1em;
+    }
+
+    #profile-info {
+        padding: 0em 1.8em 0em 0.2em;
+
+        img {
+            margin-right: 1em;
+            height: 70px;
+            width: 70px;
+        }
+
+        h4 {
+            font-size: 1.7em;
+        }
+
+        h3 {
+            margin: 1.5em 0 1em 0;
+            font-size: 1.9em;
+        }
+
+        span {
+            font-size: 1.2em;
+            margin-right: 0.3em;
+        }
+
+        a {
+            font-size: 1.2em;
+            color: $highlight;
+        }
+
+        p {
+            font-size: 1.2em;
+            font-weight: 200;
+        }
+    }
+
+}
