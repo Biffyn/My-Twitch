@@ -18,12 +18,15 @@ $(document).ready(function() {
     streamer.forEach(function(val) {
         $.ajax({
             type: 'GET',
-            url: 'https://api.twitch.tv/kraken/streams/' + val,
+            url: 'https://api.twitch.tv/kraken/streams/' + val.toLowerCase(),
             headers: {
                 'Client-ID': 'n9ilovhcd0k79pt99zkmffzp0au9gw1'
             },
             success: function(res) {
                     console.log(res);
+                    if (res.error) {
+                        console.log(error);
+                    }
                 } // end response
         }); //end ajax call
     }); // end forEach
