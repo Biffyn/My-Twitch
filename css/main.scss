@@ -105,35 +105,6 @@ body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-
-/* --------------------------------
-
-Icon style
-
--------------------------------- */
-
-.nc-align-to-text {
-  /* scale and align icon to the text element */
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  vertical-align: middle;
-  position: relative;
-  top: -0.0625em;
-  stroke: none;
-  fill: none;
-}
-
-.nc-align-to-text use {
-  color: #69f93e;
-}
-
-.nc-icon.glyph,
-.nc-align-to-text.glyph {
-  fill: currentColor;
-  stroke: none;
-}
-
 @media screen and (min-width:769px) {
   #featured {
     padding: 2em 1em;
