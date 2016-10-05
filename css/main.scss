@@ -10,6 +10,14 @@ body {
   color: #fff;
 }
 
+#blink {
+  animation: blink 1.2s linear infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
 #header {
   position: relative;
   border-radius: 0;
@@ -80,8 +88,12 @@ body {
   }
 }
 
-#offline {
+#deleted {
   display: none;
+  h1 {
+    font-size: 2.7em;
+    margin-bottom: 0.8em;
+  }
 }
 
 .dark {

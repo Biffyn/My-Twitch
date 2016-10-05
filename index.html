@@ -14,32 +14,23 @@
 <body>
     <div class="main-wrapper">
         <div id="header" class="ui fluid three item menu">
-            <a class="item">
-                <i class="gamepad icon"></i> Games
+            <a id="addChannel" class="item">
+                <i class="add icon"></i> Add New Channel
             </a>
-            <a class="item">
-                <i class="video camera icon"></i> Channels
+            <a class="item" href="#online-wrap">
+                <i class="video camera icon"></i> Online Channels
             </a>
-            <a class="item">
-                <i class="video play icon"></i> Videos
+            <a class="item" href="#offline-wrap">
+                <i class="stop circle icon"></i> Offline Channels
             </a>
         </div>
-        <!-- <div class="ui container">
-                <div class="right menu">
-                    <a class="item">
-                        <i class="video camera icon"></i>
-                        Channels
-                    </a>
-                </div>
-            </div> -->
-
         <div id="feat-wrap">
             <div id="featured" class="container">
                 <div class="row">
                     <div class="col-xs-12 col-md-8">
                         <div id="featured-vid">
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://player.twitch.tv/?channel={riotgames}" allowfullscreen="true"></iframe>
+                                <iframe class="embed-responsive-item" src="https://player.twitch.tv/?channel={ESL_SC2}" allowfullscreen="true"></iframe>
                             </div>
                         </div>
                     </div>
@@ -69,9 +60,15 @@
                 </div>
             </div>
         </div>
+        <div id="deleted-wrap" class="container">
+            <div class="row">
+                <div id="deleted">
+                </div>
+            </div>
+        </div>
     </div>
-    <script src="./js/lib/jquery-3.1.1.min.js" type="javascript"></script>
-    <script src="./js/app.js" type="javascript"></script>
+    <script src="js/lib/jquery-3.1.1.min.js" type="javascript"></script>
+    <script src="js/app.js" type="javascript"></script>
 </body>
 
 </html>
