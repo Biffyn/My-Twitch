@@ -26,7 +26,7 @@ body {
   padding: 1.5em 1em;
 }
 
-#profile-img {
+#featured-vid {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
@@ -61,22 +61,30 @@ body {
   font-size: 0.7em;
 }
 
-#online {
+#online-wrap {
   padding-top: 2em;
 }
 
-#online h1 {
+#online-wrap h1 {
   font-size: 2.8em;
   margin-bottom: 0.8em;
 }
 
-#offline {
+#online {
+  display: none;
+}
+
+#offline-wrap {
   padding: 2em 0 2.5em 0;
 }
 
-#offline h1 {
+#offline-wrap h1 {
   font-size: 2.7em;
   margin-bottom: 0.8em;
+}
+
+#offline {
+  display: none;
 }
 
 .dark {
@@ -90,7 +98,7 @@ body {
 
 /* --------------------------------
 
-Icon basic style
+Icon style
 
 -------------------------------- */
 .nc-align-to-text {
