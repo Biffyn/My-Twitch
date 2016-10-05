@@ -1,58 +1,57 @@
 $(document).ready(function() {
-  var searchQuery = $("#search").val();
-  var url = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&search=" + searchQuery + "&callback=?";
 
-  function search() {
-    $("#search").click(function() {
-      searchQuery = encodeURIComponent($("#input").val());
-      // make ajax call to api
-      $.ajax({
-        type: "GET",
-        url: url,
-        async: false,
-        dataType: "jsonp",
-        data: {
-          "action": "opensearch",
-          "format": "json",
-          "limit": 10,
-          "search": searchQuery
-        },
-        success: function(res) {
-          res[1].reverse();
-          res[2].reverse();
-          res[3].reverse();
-          $("#img").hide(); // hide the img
-          $("#output").empty(); // clear the output
-          // loop through response and prepend to frontend
-          for (var i = 0; i < res[1].length; i++) {
-            $("#output").prepend(`<div class="ui one column grid">
-                                                <div class="column">
-                                                    <div id="card" class="ui fluid centered card">
-                                                        <div class="content">
-                                                            <div id="title" class="header">` + res[1][i] + `</div>
-                                                            <div id="extract" class="description"><p>` + res[2][i] + `</p></div>
-                                                        </div>
-                                                        <div class="extra content">
-                                                            <a id="link" class="ui inverted pink button" href="` + res[3][i] + `" target="_blank" rel="noopener noreferrer">Read More</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>`);
+  var streamer = [ // array of streamer
+      "ESL_SC2",
+      "OgamingSC2",
+      "cretetion",
+      "freecodecamp",
+      "storbeck",
+      "habathcx",
+      "RobotCaleb",
+      "noobs2ninjas"
+    ],
+    stream_url = 'https://api.twitch.tv/kraken/streams/',
+    channel_url = 'https://api.twitch.tv/kraken/channel/',
+    clientID = '?client_id=n9ilovhcd0k79pt99zkmffzp0au9gw1&callback=?';
+
+  // make an ajax call to the twitch api for each of the streamers in the array
+  streamer.forEach(function(val) {
+    $.ajax({
+      type: 'GET',
+      url: stream_url + val,
+      headers: {
+        'Client-ID': 'n9ilovhcd0k79pt99zkmffzp0au9gw1'
+      },
+      success: function(res) {
+          console.log(res);
+          if (res.stream != null) {
+            $('#online').show();
+            $('#online').append(`<div class="col-xs-12 col-md-4">
+                                <div id="card" class="ui centered card">
+                                    <a class="image" href="` + res.stream.channel.url + `" target="_blank" rel="noopener noreferrer">
+                                        <img src="` + res.stream.preview.large + `">
+                                    </a>
+                                    <div class="content">
+                                        <a class="header" href="` + res.stream.channel.url + ` " target="_blank" rel="noopener noreferrer">` + res.stream.channel.display_name + `</a>
+                                        <div class="description"> ` + res.stream.channel.status.substring(0, 40) + ` ... </div>
+                                    </div>
+                                    <div class="extra content">
+                                        <span class="right floated">
+                                            Online
+                                        </span>
+                                        <span>
+                                        <i class="user icon"></i>
+                                            ` + res.stream.viewers + ` Viewers
+                                      </span>
+                                    </div>
+                                </div>`);
+          } else if (res.stream === null) {
+            $('#offline').show();
+
+          } else if (error) {
+
           }
-        },
-        error: function(err) {
-          console.log(err);
-        }
-      });
-
-    }); // end search.on()click
-
-    //Trigger search click event when enter is pressed
-    $('#input').keypress(function(e) {
-      if (e.which == 13) {
-        $('#search').click();
-      }
-    });
-  } // end search()
-  search();
+        } // end response
+    }); //end ajax call
+  }); // end forEach
 }); //end doc.ready
