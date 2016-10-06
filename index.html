@@ -17,7 +17,7 @@
     <div class="main-wrapper">
         <div id="header" class="ui fluid three item menu">
             <a id="addChannel" class="item">
-                <i class="add icon"></i> Add New Channel
+                <i class="add icon"></i> Channels
             </a>
             <a class="item" href="#online-wrap">
                 <i class="video camera icon"></i> Online Channels
@@ -31,19 +31,9 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-8">
                         <div id="featured-vid">
-                            <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://player.twitch.tv/?channel={ESL_SC2}" allowfullscreen="true"></iframe>
-                            </div>
                         </div>
                     </div>
                     <div id="profile-info" class="col-xs-12 col-md-4">
-                        <img id="channel-logo" class="pull-left" src="img/logo_biffyn.png" alt="Logo">
-                        <h4 id="channel-name">Channel Name</h4>
-                        <span class="pull-left">Streaming:</span>
-                        <a id="game-type" href=""> Minecraft</a>
-                        <h3 id="stream-title">LOSUMG - Community Demolition and Re-Building Fun</h3>
-                        <p id="channel-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis facilis nemo neque quo aliquam omnis, perferendis saepe fugit maiores explicabo reprehenderit blanditiis ea incidunt enim laudantium, iste cupiditate quam debitis.</p>
-                        <a id="channel-link" href="https://www.twitch.tv/biffyn">https://www.twitch.tv/biffyn</a>
                     </div>
                 </div>
             </div>
@@ -70,12 +60,15 @@
         </div>
     </div>
     <div id="footer" class="ui inverted menu">
-        <a class="active item">Home</a>
-        <a class="item">Messages</a>
-        <a class="item">Friends</a>
+        <div class="container">
+            <a class="active item">Home</a>
+            <a class="item">Messages</a>
+            <a class="item">Friends</a>
+        </div>
     </div>
 
     <script src="js/lib/jquery-3.1.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
 </body>
 

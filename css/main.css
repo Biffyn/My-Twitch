@@ -5,11 +5,11 @@ body {
 }
 
 #blink {
-  animation: blink 1.2s linear infinite;
+  animation: blink 1.5s linear infinite;
 }
 
 @keyframes blink {
-  50% {
+  30% {
     opacity: 0;
   }
 }
@@ -117,7 +117,7 @@ body {
   background-color: #2a0845;
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
   #featured {
     padding: 2em 1em;
   }
