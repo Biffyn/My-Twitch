@@ -23,7 +23,7 @@ $(document).ready(function () {
         stream_url = 'https://api.twitch.tv/kraken/streams/',
         user_url = 'https://api.twitch.tv/kraken/users/',
         clientID = '?client_id=n9ilovhcd0k79pt99zkmffzp0au9gw1&callback=?';
-        
+
     streamer.forEach(function (val) {
         $.getJSON(stream_url + val + clientID, function (res) {
             if (res.stream != null) {
